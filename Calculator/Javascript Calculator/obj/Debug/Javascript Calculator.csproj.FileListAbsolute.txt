@@ -1,0 +1,20 @@
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\ApplicationInsights.config
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\csc.exe
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\System.Collections.Immutable.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\System.Reflection.Metadata.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\vbc.exe
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\VBCSCompiler.exe
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\roslyn\VBCSCompiler.exe.config
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\Javascript Calculator.dll.config
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\Javascript Calculator.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\Javascript Calculator.pdb
+C:\Git\JavascriptCalculator\Javascript Calculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Git\JavascriptCalculator\Javascript Calculator\obj\Debug\Javascript Calculator.csprojResolveAssemblyReference.cache
+C:\Git\JavascriptCalculator\Javascript Calculator\obj\Debug\Javascript Calculator.dll
+C:\Git\JavascriptCalculator\Javascript Calculator\obj\Debug\Javascript Calculator.pdb

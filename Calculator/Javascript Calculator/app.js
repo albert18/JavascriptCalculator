@@ -15,7 +15,7 @@ var budgetController = (function () {
     };
 
     var data = {
-        allitem: {
+        allItem: {
             exp: [],
             inc: []
         },
@@ -25,7 +25,36 @@ var budgetController = (function () {
         }
     };
 
+    return {
+        addItem: function (type, des, val) {
 
+            var newItem;
+
+            // Create A New ID
+            if (data.allItem[type].length > 0) {
+
+                ID = data.allItem[type][data.allItem[type].length - 1].id + 1;
+            } else {
+                ID = 0;
+            }
+
+
+            //Create new item based on  'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val)
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val)
+            }
+
+            data.allItem[type].push(newItem)
+            return newItem;
+        },
+
+        testing: function () {
+            console.log(data)
+        }
+
+    };
 })();
 
 
@@ -51,9 +80,14 @@ var UIController = (function () {
         getInput: function () {
             return {
                 type: document.querySelector(domStrings.inputType).value,
-                Description: document.querySelector(domStrings.inputDescription).value,
-                Value: document.querySelector(domStrings.inputValue).value
+                description: document.querySelector(domStrings.inputDescription).value,
+                value: document.querySelector(domStrings.inputValue).value
             };
+        },
+
+        addListItem: function(obj, type){
+            
+        
         },
 
         getDOMstrings: function (){
@@ -84,10 +118,13 @@ var controller = (function (budgetCtrl, UICtrl) {
 
     var ctrlAddItem = function () {
 
+        var input, newItem;
+
         //Get all file input
-        var input = UIController.getInput();
+        input = UIController.getInput();
 
         //Add the item to the budget controller
+        newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
         //Add the item to the UI
 

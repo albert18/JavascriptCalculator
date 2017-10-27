@@ -116,7 +116,8 @@ var UIController = (function () {
         budgetLabel: '.budget__value',
         incomeLabel: '.budget__income--value',
         expensesLabel: '.budget__expenses--value',
-        percentageLabel: '.budget__expenses--percentage'
+        percentageLabel: '.budget__expenses--percentage',
+        container: '.container'
 
     }
 
@@ -197,7 +198,11 @@ var controller = (function (budgetCtrl, UICtrl) {
             if (event.keyCode === 13 || event.which === 13) {
                 ctrlAddItem();
             }
-        })
+        });
+
+        document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+
+
     }
 
         var updateBudget = function() {
@@ -214,28 +219,50 @@ var controller = (function (budgetCtrl, UICtrl) {
 
 
 
-    var ctrlAddItem = function () {
+        var ctrlAddItem = function () {
 
-        var input, newItem;
+            var input, newItem;
 
-        //Get all file input
-        input = UIController.getInput();
+            //Get all file input
+            input = UIController.getInput();
 
-        if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
-            //Add the item to the budget controller
-            newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+            if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+                //Add the item to the budget controller
+                newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
-            //Add the item to the UI
-            UICtrl.addListItem(newItem, input.type);
+                //Add the item to the UI
+                UICtrl.addListItem(newItem, input.type);
 
-            //Clear the fields
-            UICtrl.clearFields();
+                //Clear the fields
+                UICtrl.clearFields();
 
-            //Calculate and update budget
-            updateBudget();
-        }
+                //Calculate and update budget
+                updateBudget();
+            }
+        };
+        
+    //Delete Item 
+        var ctrlDeleteItem = function (event) {
+            var itemID, splitID, type, ID;
 
-    }
+            itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+
+            if (itemID) {
+                splitID = itemID.spit('-');
+                type = splitID[0];
+                ID = splitID[1];
+
+
+                // 1. delete the item from the data structure
+
+                // 2. Delete the item from the UI
+  
+                // 3. Update and show the new budget
+
+                // 4. Calculate and update percentages
+
+            }
+        };
 
     return {
         init: function () {
